@@ -25,10 +25,10 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Save Buffer
-vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Write buffer' })
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = '[W]rite buffer' })
 
 -- Close Nvim
-vim.keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = 'Quit' })
+vim.keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = '[Q]uit' })
 
 -- Open File Tree
 -- vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>', { desc = 'Open tree' })
@@ -44,6 +44,10 @@ vim.keymap.set('n', 'N', 'Nzz')
 vim.keymap.set('x', '<leader>p', '"_dP')
 
 -- Copy to system clipboard
-vim.keymap.set('n', '<leader>y', '"+y')
-vim.keymap.set('n', '<leader>Y', '"+Y')
-vim.keymap.set('v', '<leader>y', '"+y')
+vim.keymap.set('n', '<leader>y', '"+y', { desc = 'Copy to system clipboard' })
+vim.keymap.set('n', '<leader>Y', '"+Y', { desc = 'Copy line to system clipboard' })
+vim.keymap.set('v', '<leader>y', '"+y', { desc = 'Copy selection to system clipboard' })
+vim.keymap.set('v', '<leader>Y', '"+Y', { desc = 'Copy lines selected to system clipboard' })
+
+-- Terminal mode
+-- vim.keymap.set('n', '<leader>t', ':terminal<CR>')

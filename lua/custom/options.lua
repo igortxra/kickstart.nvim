@@ -54,3 +54,19 @@ vim.o.scrolloff = 10
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.o.confirm = true
+
+-- Sets how neovim will display certain whitespace characters in the editor.
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+-- Size for spaces for tab
+vim.o.tabstop = 4
+-- How many spaces when pressing tab
+vim.o.softtabstop = 4
+-- How many spaces when pressing tab
+vim.o.shiftwidth = 4
+
+-- Identation option
+vim.o.smarttab = true
+vim.o.smartindent = true
+vim.o.autoindent = true

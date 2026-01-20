@@ -18,7 +18,20 @@ return {
       window = {
         mappings = {
           ['\\'] = 'close_window',
+          ['O'] = 'open_with_xdg',
         },
+      },
+      commands = {
+        open_with_xdg = function(state)
+          local node = state.tree:get_node()
+          local path = node:get_id()
+
+          if not path then
+            return
+          end
+
+          vim.fn.jobstart({ 'xdg-open', path }, { detach = true })
+        end,
       },
     },
   },
